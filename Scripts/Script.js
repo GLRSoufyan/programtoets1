@@ -1,22 +1,25 @@
 function validateForm(event) {
+    // Zorgt ervoor dat de form niet verstuurt als er niks is ingevult
     event.preventDefault();
 
+    // Fetched all informatie die de gebruiker gegeven heeft
     const firstName = document.getElementById('voornaam').value;
     const lastName = document.getElementById('achternaam').value;
     const city = document.getElementById('plaatsnaam').value;
     const postalCode = document.getElementById('postcode').value;
-    
     const albumPrice = parseFloat(document.getElementById('album').value);
     const ticketsPrice = parseFloat(document.getElementById('tickets').value);
 
-    if (albumPrice === 0 || ticketsPrice === 0) {
-        alert('Je moet zowel een album als tickets kiezen!');
+    // Als allebij de gekochte objecten 0 euro kosten (dus niks gekocht is) komt er een error te staan
+    if (albumPrice === 0 && ticketsPrice === 0) {
+        alert('Je moet tenminste IETS kiezen om te kopen');
         return false;
     }
 
     let totalPrice = albumPrice + ticketsPrice;
     let discount = 0;
 
+    // Als allebei de album en concert tickets gekocht zijn krijgt de user een discount
     if (albumPrice > 0 && ticketsPrice > 0) {
         discount = totalPrice * 0.10;
         totalPrice -= discount;
