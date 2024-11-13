@@ -1,0 +1,101 @@
+body {
+    background-image: url(https://64.media.tumblr.com/1635a45e12c59fa41ab54b3acc6f7443/tumblr_oc34naJAc31tokz0ko1_500.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+#header a {
+    margin: 0 15px;
+}
+
+#home-logo {
+    width: 75px;
+    height: auto;
+    cursor: pointer;
+}
+
+#home-logo button:hover{
+    backdrop-filter: blur(40px);
+}
+
+#header button {
+    background-color: #000000;
+    color: white;
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#header button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+hr.rounded {
+    width: 85%;
+    border: 0;
+    border-top: 8px solid #ffffff;
+    margin: 50px auto;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+hr.thinrounded {
+    width: 70%;
+    border: 0;
+    border-top: 4px dashed #ffffff99;
+    margin: 30px auto;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+small, p{
+    color: #bcbcbc;
+}
+
+#contact{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.464);
+    margin-top: 10px;
+    color: white;
+}
+
+#confirmation, select, button, input {
+    color: #ffffff;
+    background-color: #000000;
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+}

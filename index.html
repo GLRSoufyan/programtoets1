@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tickets voor THE NEIGHBORHOOD koop je hier.">
+    <meta name="keywords" content="The, Neighborhood, The Neighborhood, muziek, rock, indie, Tours, Contact">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Soufyan Boulakhrif">
 
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <title>The Neighborhood</title>
+</head>
+<body>
+    <h1>THE NEIGHBORHOOD</h1>
+    <small>Tickets & More</small>
+    
+    <h2>Concert Kaartjes:</h2>
+    <div id="contact">
+        <form id="orderForm" onsubmit="return validateForm(event)">
+            <hr class="thinrounded">
+            <label for="voornaam">Voornaam:</label> <br>
+            <input type="text" id="voornaam" name="voornaam" required placeholder="Pieter">
+            <hr class="thinrounded">
+
+            <label for="achternaam">Achternaam:</label> <br>
+            <input type="text" id="achternaam" name="achternaam" required placeholder="de Jong">
+            <hr class="thinrounded">
+    
+            <label for="plaatsnaam">Plaatsnaam:</label> <br>
+            <input type="text" id="plaatsnaam" name="plaatsnaam" required placeholder="Rotterdam, Blaak">
+            <hr class="thinrounded">
+
+            <label for="postcode">Postcode:</label> <br>
+            <input type="text" id="postcode" name="postcode" required placeholder="3011XP">
+            <hr class="thinrounded">
+
+            <label for="album">Album:</label><br>
+            <select id="album" name="album">
+                <option value="0">Kies album</option>
+                <option value="20">Album 1 (€20)</option>
+                <option value="25">Album 2 (€25)</option>
+            </select>
+            <hr class="thinrounded">
+            
+            <label for="tickets">Concerttickets:</label><br>
+            <select id="tickets" name="tickets">
+                <option value="0">Kies tickets</option>
+                <option value="50">1 Ticket (€50)</option>
+                <option value="100">2 Tickets (€100)</option>
+                <option value="150">3 Tickets (€150)</option>
+            </select>
+            <hr class="thinrounded">
+
+            <button type="submit">Verstuur</button>
+        </form>
+    </div>
+
+    <div id="confirmation" style="display: block;">
+        <h2>Bedankt voor uw bestelling!</h2>
+        <p id="orderDetails"></p>
+    </div>
+
+    <script src="Scripts/Script.js"></script>
+</body>
+</html>
